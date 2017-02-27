@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+   mongo:
+      container_name: dockermongo
+      image: mongo:latest
+      ports:
+         - "8090:27017"
+      networks:
+         - springbootmongo-network
+
+   springbootmongo:
+      image: dssafford/springbootmongo
+      ports:
+         - "8092:8092"
+      networks:
+         - springbootmongo-network
+
+networks:
+   springbootmongo-network:
+      driver: bridge
