@@ -5,7 +5,7 @@ services:
       container_name: dockermongo
       image: mongo:latest
       ports:
-         - "8090:27017"
+         - "8095:27017"
       networks:
          - springbootmongo-network
 
